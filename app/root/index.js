@@ -6,11 +6,10 @@ import {
 } from 'react-native';
 
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import store from './store';
 
-import Screen_home from './screen-home';
+import Screen_home from '../modules/screen-home';
 
-const store = createStore(rootReducer);
 console.log(store.getState())
 
 class App extends React.Component {
@@ -18,14 +17,15 @@ class App extends React.Component {
     return (
       <Provider store={store} >
         <Screen_home />
-      <Provide />
+      </Provider>
     );
   }
-}
+};
+
 
 export default App;
 
 
-function rootReducer(state = {someState: 'hellostate'}, action) {
+function rootReducer(state = {'someState': 'sssomeState'}, action) {
   return state
 }
