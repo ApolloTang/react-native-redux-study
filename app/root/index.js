@@ -5,9 +5,9 @@ import {
   Provider,
 } from 'react-redux';
 
-import store from './store';
-
 import Screen_home from '../modules/screen-home';
+
+import store from './store';
 
 import ConnectedNavigator from './connected-navigator';
 
@@ -19,9 +19,8 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={this.state.store} >
-        <ConnectedNavigator>
-          <Screen_home />
-        </ConnectedNavigator>
+        <ConnectedNavigator/>
+        {/* <Screen_home/> */}
       </Provider>
     );
   }
