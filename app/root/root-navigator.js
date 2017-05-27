@@ -12,6 +12,6 @@ const navigatorMap = {
   ScreenB: { screen: ScreenB },
 };
 
-const AppNavigator = StackNavigator( navigatorMap );
+const Navigator = StackNavigator( navigatorMap );
 
-export {AppNavigator};
+export default Navigator;

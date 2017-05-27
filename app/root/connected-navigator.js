@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { addNavigationHelpers, } from 'react-navigation';
 import { connect } from 'react-redux';
 
-import {AppNavigator} from  './app-navigator';
+import RootNavigator from  './root-navigator';
 
 const mapStateToProps = state => ({
   nav: state.nav,
@@ -19,7 +19,11 @@ class ConnectedNavigator extends React.Component {
   render() {
     const { dispatch , nav } = this.props;
     console.log("ConnectedNavigator's property: ", this.props)
-    return <AppNavigator navigation={addNavigationHelpers({ dispatch, state: nav })} />
+    return (
+    <RootNavigator
+      navigation={addNavigationHelpers({ dispatch, state: nav })}
+      />
+    )
 
   }
 };

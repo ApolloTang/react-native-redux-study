@@ -1,14 +1,20 @@
 import {combineReducers} from 'redux';
 
-import {AppNavigator} from  './app-navigator';
+import RootNavigator from  './root-navigator';
 
-const initialState = AppNavigator.router.getStateForAction(
-  AppNavigator.router.getActionForPathAndParams('Home')
+const initialState = RootNavigator.router.getStateForAction(
+  RootNavigator.router.getActionForPathAndParams('Home')
 );
-console.log('xxxxx initialState: ', initialState);
+
+console.log('in Root reducer: initialState: ', initialState);
 
 const nav = function navReducer(state = initialState, action) {
-  const nextState = AppNavigator.router.getStateForAction(action, state);
+  console.log('in nav reducer vvvvvvvvvvvvvvvvvvvvvvvvvvv')
+  console.log('action: ', action)
+  console.log('prev state: ', state)
+  const nextState = RootNavigator.router.getStateForAction(action, state);
+  console.log('next state: ', nextState)
+  console.log('in nav reducer ^^^^^^^^^^^^^^^^^^^^^^^^^^^')
   return nextState;
 };
 
