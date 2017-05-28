@@ -1,5 +1,3 @@
-import './ReactotronConfig';
-
 import React from 'react';
 
 import {
