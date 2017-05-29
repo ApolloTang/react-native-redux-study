@@ -25,9 +25,9 @@ class ConnectedNavigator extends React.Component {
     return (
     <RootNavigator
       ref={props_rootNavigator=>{
-        // Make properties of rootNavigator available to this component (ie. ConnectedNavigator).
-        // We do this because we might want to have access to these properties in this
-        // compoenent.
+        // Make properties of rootNavigator available to ConnectedNavigator.
+        // We do this because we might want to have access to RootNavigator's properties
+        // in ConnectedNavigator.
         this.props_rootNavigator = props_rootNavigator
       }}
       navigation={
