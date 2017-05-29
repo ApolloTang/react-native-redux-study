@@ -14,4 +14,8 @@ const navigatorMap = {
 
 const Navigator = StackNavigator( navigatorMap );
 
-export default Navigator;
+// export default Navigator;
+
+
+export {AppNavigator as default} from '../modules/log-in-out/navigators/AppNavigator';
+
