@@ -7,14 +7,16 @@ import {
 import rootReducer from './reducer';
 import middlewares from './middlewares';
 
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
   rootReducer,
-  compose(
+  /* preloadedState, */
+  composeEnhancers(
     applyMiddleware(...middlewares)
   )
 );
-
-console.log('store state: ', store.getState())
 
 export default store;
 
