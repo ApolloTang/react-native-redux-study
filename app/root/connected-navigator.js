@@ -17,10 +17,10 @@ class ConnectedNavigator extends React.Component {
     nav: PropTypes.object.isRequired,
   }
   componentDidMount(prevProps, prevState) {
-    console.log('componentDidMount: props_rootNavigator: ', this.props_rootNavigator);
+    // console.log('componentDidMount: props_rootNavigator: ', this.props_rootNavigator);
   }
   render() {
-    console.log("ConnectedNavigator's property: ", this.props);
+    // console.log("ConnectedNavigator's property: ", this.props);
     const { dispatch , nav } = this.props;
     return (
     <RootNavigator
@@ -40,7 +40,7 @@ class ConnectedNavigator extends React.Component {
     )
   }
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate: props_rootNavigator: ', this.props_rootNavigator);
+    // console.log('componentDidUpdate: props_rootNavigator: ', this.props_rootNavigator);
   }
 };
 
